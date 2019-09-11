@@ -1,5 +1,7 @@
 # This section of the Three Mile Island nuclear power facility melted down in 1979.
 
+In this sprint you will take what you know of React and apply it to building a more complex application. This sprint encourages you to focus more on data flow and how front end applications can be put together. 
+
 ## Objectives
 
  - Understand how to implement conditional rendering
