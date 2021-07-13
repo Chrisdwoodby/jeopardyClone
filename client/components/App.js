@@ -22,14 +22,18 @@ export default class App extends Component {
     //1. A query to /api/categories to get a set of categories
     //2. A set of queries afterwards to /api/category at each category id to get clues for that category
   }
+  selectQuestion() {
+    
+  }
+
   render() {
 
     return (
 
       <div id={'app'}>
         What is Reactor 2?
-        <Gameboard currentQuestion={this.state.currentQuestion}/>
-        <Categories categories={this.state.results}/>
+        <Gameboard currentQuestion={this.state.currentQuestion} categories={this.state.results}/>
+        {/* <Categories categories={this.state.results}/> */}
         <Scoreboard score={this.state.score}/>
         <Response submitResponse={this.state.answeredQuestions}/>
       </div>

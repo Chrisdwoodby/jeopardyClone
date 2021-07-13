@@ -5,8 +5,9 @@ import Category from './Category'
 const Categories = props => {
   return (
     <div id={'categories'} data-testid="categoryList">
-      {props.categories.map((items, i) => {
-       return <Category title = {items}/>
+      {/* {props.categories.title} */}
+      {props.categories.map((items) => {
+      return <Category title = {items.title} currentQuestion={props.currentQuestion} clues={items.clues}/>
       })}
     </div>
   );
@@ -22,6 +23,3 @@ Categories.propTypes = {
 export default Categories;
 
 
-// {props.categories.map((items) => {
-//   return items.title
-// })}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Categories from './Categories'
+import Categories from './Categories'
 
 const Gameboard = props => {
   return (
@@ -9,7 +9,9 @@ const Gameboard = props => {
       {/* Yes? Show clue */}
       {/* No? Show Categories */}
       {/* <Categories/> */}
-      {/* <Categories categories={this.state.results}/> */}
+
+      <Categories categories = {props.categories} currentQuestion={props.currentQuestion}/>
+
     </div>
   );
 };

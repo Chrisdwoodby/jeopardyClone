@@ -9,9 +9,9 @@ const Category = props => {
     <div className={'category'} data-testid="category">
       {/* display category */}
       {/* display clues for each category */}
-      {props.title.title}
-      {props.title.clues.map((clue) => {
-        return <Clue clueObject={clue.value}/>
+      {props.title}
+      {props.clues.map((clue) => {
+        return <Clue clueObject={clue}/>
       })}
     </div>
   );
