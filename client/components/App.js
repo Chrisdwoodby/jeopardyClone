@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { categories } from '../../testdata';
+import Gameboard from './Gameboard';
+import Scoreboard from './Scoreboard';
+import Response from './Response'
+import Categories from './Categories'
+// import Category from './Category'
 
 export default class App extends Component {
   constructor(props) {
@@ -18,13 +23,20 @@ export default class App extends Component {
     //2. A set of queries afterwards to /api/category at each category id to get clues for that category
   }
   render() {
+
     return (
+
       <div id={'app'}>
         What is Reactor 2?
-        {/* Gameboard */}
-        {/* Scoreboard */}
-        {/* Response */}
+        <Gameboard currentQuestion={this.state.currentQuestion}/>
+        <Categories categories={this.state.results}/>
+        <Scoreboard score={this.state.score}/>
+        <Response submitResponse={this.state.answeredQuestions}/>
       </div>
     );
   }
 }
+
+//  <div>{this.state.results.map(item) => {
+//   <div>{item.title}</div>
+// }}</div>
