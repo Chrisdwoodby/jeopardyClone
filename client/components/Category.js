@@ -11,7 +11,7 @@ const Category = props => {
       {/* display clues for each category */}
       {props.title}
       {props.clues.map((clue) => {
-        return <Clue clueObject={clue}/>
+        return <Clue clueObject={clue} selectQuestion={props.selectQuestion}/>
       })}
     </div>
   );
