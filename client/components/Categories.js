@@ -4,10 +4,11 @@ import Category from './Category'
 
 const Categories = props => {
   return (
+
     <div id={'categories'} data-testid="categoryList">
       {/* {props.categories.title} */}
-      {props.categories.map((items) => {
-      return <Category title = {items.title} currentQuestion={props.currentQuestion} clues={items.clues} selectQuestion={props.selectQuestion}/>
+      {props.categories.map((items, i) => {
+      return <Category key={i} title = {items.title} currentQuestion={props.currentQuestion} clues={items.clues} selectQuestion={props.selectQuestion} clicked={props.clicked}/>
       })}
     </div>
   );

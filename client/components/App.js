@@ -14,7 +14,8 @@ export default class App extends Component {
       results: categories,
       currentQuestion: {},
       answeredQuestions: [],
-      score: 0
+      score: 0,
+      clicked: false
     };
   }
   componentDidMount() {
@@ -24,7 +25,7 @@ export default class App extends Component {
   }
   selectQuestion() {
     this.setState({
-      
+      clicked: true
     })
   }
 
@@ -34,8 +35,7 @@ export default class App extends Component {
 
       <div id={'app'}>
         What is Reactor 2?
-        <Gameboard currentQuestion={this.state.currentQuestion} categories={this.state.results} selectQuestion={this.state.selectQuestion}/>
-        {/* <Categories categories={this.state.results}/> */}
+        <Gameboard currentQuestion={this.state.currentQuestion} categories={this.state.results} selectQuestion={this.selectQuestion.bind(this)} clicked={this.state.clicked}/>
         <Scoreboard score={this.state.score}/>
         <Response submitResponse={this.state.answeredQuestions}/>
       </div>

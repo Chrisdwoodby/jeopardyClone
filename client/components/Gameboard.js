@@ -10,7 +10,7 @@ const Gameboard = props => {
       {/* No? Show Categories */}
       {/* <Categories/> */}
 
-      <Categories categories = {props.categories} currentQuestion={props.currentQuestion} selectQuestion={props.selectQuestion}/>
+      <Categories categories = {props.categories} currentQuestion={props.currentQuestion} selectQuestion={props.selectQuestion} clicked={props.clicked}/>
 
     </div>
   );

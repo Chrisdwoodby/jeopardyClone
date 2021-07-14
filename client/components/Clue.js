@@ -5,10 +5,19 @@ const Clue = props => {
   // show $ value of clue OR
   // the Clue question itself OR
   // empty screen if it was already answered
-  return (
-    <div class="clueValue">
-      {props.clueObject.value}
+  if (props.clicked) {
+    return (
+      <div class="clueValue">
+      {props.clueObject.question}
+      {/* {console.log(props.clicked)} */}
     </div>
+    )
+  }
+  return (
+    <div class="clueValue" onClick={props.selectQuestion}>
+    {props.clueObject.value}
+    {/* {console.log(props.clicked)} */}
+  </div>
   )
 };
 
