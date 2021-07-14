@@ -5,20 +5,20 @@ const Clue = props => {
   // show $ value of clue OR
   // the Clue question itself OR
   // empty screen if it was already answered
-  if (props.clicked) {
+  console.log(props.clueObject)
+  if (props.clicked === true) {
     return (
-      <div class="clueValue">
+      <div id="gameboard" onClick={props.selectQuestion}>
       {props.clueObject.question}
-      {/* {console.log(props.clicked)} */}
     </div>
     )
-  }
+  } else if (props.clicked === false) {
   return (
-    <div class="clueValue" onClick={props.selectQuestion}>
-    {props.clueObject.value}
-    {/* {console.log(props.clicked)} */}
+    <div class="clueValue">
+    <div onClick={props.selectQuestion}>{props.clueObject.value}</div>
   </div>
   )
+  }
 };
 
 Clue.propTypes = {
